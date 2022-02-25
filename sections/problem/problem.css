@@ -1,0 +1,44 @@
+.problem__content {
+  padding: 55px 0 75px;
+}
+
+.problem__list {
+  row-gap: 1em;
+}
+
+.problem__item {
+  background: url('times.svg') no-repeat left 5px;
+  background-size: 16px;
+  padding-left: 30px;
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .problem__list-title {
+    margin: 22px 0 28px;
+  }
+}
+
+
+
+@media screen and (min-width: 641px) {
+  .problem__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    row-gap: 30px;
+  }
+
+  .problem__header {
+    width: 35%;
+    min-width: 205px;
+  }
+
+  .problem__list-title,
+  .problem__list {
+    width: 65%;
+    max-width: calc(100% - 205px);
+  }
+}

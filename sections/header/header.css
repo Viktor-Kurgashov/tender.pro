@@ -1,0 +1,183 @@
+body {
+  --header-height: 60px;
+  padding-top: var(--header-height);
+}
+
+.header {
+  background: white;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 5%;
+}
+
+.header__content {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 100%;
+  align-items: center;
+  column-gap: 1%;
+}
+
+.header__burger,
+.header__search-btn,
+.header__app-btn {
+  width: 32px;
+  height: 32px;
+}
+
+.header__logo {
+  background-image: url('../../images/logo.svg');
+  background-size: contain;
+  grid-area: logo;
+  width: 100px;
+  height: 40px;
+}
+
+.header__burger {
+  background-image: url('images/burger.svg');
+  background-size: 22px auto;
+  grid-area: burger;
+  margin-right: 8px;
+}
+
+.header__burger_closing {
+  background-image: url('images/close.svg');
+  background-size: 27px;
+  position: relative;
+  z-index: 20;
+}
+
+.header__search-btn {
+  background-image: url('images/search.svg');
+  background-size: 20px;
+  grid-area: search;
+}
+
+.header__app-btn {
+  background-image: url('images/apps.svg');
+  background-size: 17px;
+  grid-area: apps;
+}
+
+.header__login-link {
+  height: 40px;
+  padding: 0 8px;
+  line-height: 40px;
+  font-weight: 500;
+  grid-area: login;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .header__content {
+    grid-template-areas: "burger logo search apps login";
+    grid-template-columns: auto 1fr auto auto auto;
+    position: relative;
+  }
+
+  .header__blur {
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+  }
+
+  .nav {
+    overflow-y: hidden;
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    display: none;
+  }
+
+  .header__blur_visible,
+  .nav_visible {
+    display: block;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: -100%;
+    row-gap: 10px;
+  }
+
+  .nav__list_visible {
+    transition: margin-top 0.5s;
+    margin-top: 0;
+  }
+
+  .nav__link {
+    background: white;
+    border-radius: 2px;
+    padding: 12px 20px;
+    font-weight: 500;
+  }
+}
+
+
+
+@media screen and (min-width: 641px) {
+  body {
+    --header-height: 80px;
+  }
+
+  .header__content {
+    column-gap: min(1.5%, 20px);
+  }
+
+  .header__logo {
+    width: 138px;
+  }
+
+  .header__burger,
+  .header__search-btn,
+  .header__app-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__burger { background-size: 25px auto; }
+  .header__burger_closing { background-size: 30px auto; }
+  .header__search-btn { background-size: 22px; }
+  .header__app-btn { background-size: 19px; }
+}
+
+
+
+@media screen and (min-width: 961px) {
+  .header__content {
+    grid-template-areas: "logo nav search apps login";
+    grid-template-columns: 1fr auto auto auto auto;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .nav__list {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  .nav__link {
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+}

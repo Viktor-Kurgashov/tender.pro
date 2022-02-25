@@ -1,0 +1,31 @@
+.cataloging__content {
+  padding: 60px 0 80px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .cataloging__text:first-of-type {
+    margin: 28px 0 22px;
+  }
+}
+
+
+
+@media screen and (min-width: 769px) {
+  .cataloging__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    row-gap: 18px;
+  }
+
+  .cataloging__header {
+    width: 45%;
+  }
+
+  .cataloging__text {
+    width: 55%;
+  }
+}

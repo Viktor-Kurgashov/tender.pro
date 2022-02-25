@@ -1,0 +1,44 @@
+.answer__content {
+  padding: 60px 0 75px;
+}
+
+.answer__list {
+  row-gap: 1em;
+}
+
+.answer__item {
+  background: url('check.svg') no-repeat left 6px;
+  background-size: 18px;
+  padding-left: 30px;
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .answer__list-title {
+    margin: 24px 0 30px;
+  }
+}
+
+
+
+@media screen and (min-width: 641px) {
+  .answer__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    row-gap: 30px;
+  }
+
+  .answer__header {
+    width: 35%;
+    min-width: 205px;
+  }
+
+  .answer__list-title,
+  .answer__list {
+    width: 65%;
+    max-width: calc(100% - 205px);
+  }
+}

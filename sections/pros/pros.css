@@ -1,0 +1,61 @@
+.pros__content {
+  padding: 60px 0 75px;
+}
+
+.pros__item {
+  background-image: url('flame.svg');
+  background-repeat: no-repeat;
+}
+
+.pros__item:nth-child(2) {
+  background-image: url('card.svg');
+}
+
+.pros__item:last-child {
+  background-image: url('shield.svg');
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .pros__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    row-gap: 24px;
+  }
+
+  .pros__item {
+    background-size: auto 28px;
+    background-position: left top;
+    padding-left: 40px;
+  }
+
+  .pros__item:nth-child(2) {
+    background-size: auto 25px;
+  }
+}
+
+
+
+@media screen and (min-width: 769px) {
+  .pros__list {
+    display: flex;
+    column-gap: 4px;
+    margin-top: 40px;
+  }
+
+  .pros__item {
+    padding: 52px 1% 12px;
+    background-position: 4% 12px;
+    background-color: white;
+  }
+
+  .pros__item:first-child {
+    background-size: auto 32px;
+  }
+
+  .pros__item:nth-child(2) {
+    background-size: auto 28px;
+  }
+}

@@ -1,0 +1,84 @@
+.contacts__content {
+  padding: 60px 0 110px;
+}
+
+.contacts__list {
+  margin-top: 2em;
+  display: flex;
+  gap: 24px 4%;
+}
+
+.contact {
+  position: relative;
+  padding-left: 5em;
+  row-gap: 0.75em;
+}
+
+.contact__avatar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+}
+
+.contacts__caption {
+  color: var(--color-midgrey);
+}
+
+.contacts__link {
+  background: url('images/phone.svg') no-repeat left center;
+  background-size: 1.25em;
+  padding-left: 1.75em;
+}
+
+.contacts__link:nth-of-type(2) {
+  background-image: url('images/smartphone.svg');
+}
+
+.contacts__link:nth-of-type(3) {
+  background-image: url('images/email.svg');
+}
+
+.contacts__link:nth-of-type(4) {
+  background: url('images/skype.svg') no-repeat 2px center;
+  background-size: 1em;
+}
+
+.contacts__button {
+  background: var(--color-red);
+  border-radius: 3px;
+  max-width: 325px;
+  height: 45px;
+  margin-top: 40px;
+}
+
+
+
+@media screen and (min-width: 641px) {  
+  .contacts__button {
+    border-radius: 5px;
+    max-width: 375px;
+    height: 55px;
+    margin: 50px auto 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts__list {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .contact {
+    flex-basis: 48%;
+    padding-left: 105px;
+  }
+
+  .contact__avatar {
+    width: 84px;
+    height: 84px;
+  }
+}
